@@ -1,0 +1,90 @@
+<form [formGroup]="formulario" >
+
+ <div class="card text-bg-dark">
+  <div class="card-header">
+     <h3>Detalle de Vehiculo</h3> 
+  </div>
+
+
+  <div class = 'container-fluid'>
+    <div class="row">
+        
+      <div class="col-6 container">
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label" >Codigo:</label>
+          <div class="col-sm-9">
+           <input type="text" class="form-control" formControlName="codigo"  >
+         </div>
+        </div>
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label" >Marca:</label>
+          <div class="col-sm-9">
+          <input type="text" class="form-control" formControlName="marca"  >
+         </div>
+        </div>
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label">Modelo:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="modelo"  >
+          </div>
+        </div>
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label">Año:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="anio"  >
+          </div>
+        </div>
+
+        
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label">Kilometraje:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="kilometraje"  >
+          </div>
+        </div>
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label">Precio:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="precio"  >
+          </div>
+        </div>
+
+        <div class="col-mb-3 row">
+          <label for="staticcCodigo" class="col-lg-3 col-form-label">Calificacion:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="calificacion"  >
+          </div>
+        </div>
+        <br>
+        
+      </div>
+        <div class="col-6 container">
+          <img src="{{vehiculo?.foto}}" >
+          
+        </div>
+    </div>
+
+   
+  
+</div>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button class='btn btn-primary btn-sm' (click)="guardar()"  >
+    Guardar
+  </button>
+</div>
+    <br>
+
+  <div class="card-footer">
+    <button class="btn btn-secondary" style="width:110px"  routerLink="/vehiculos" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg> Atrás
+    </button>
+</div>
+</div>
+</form>

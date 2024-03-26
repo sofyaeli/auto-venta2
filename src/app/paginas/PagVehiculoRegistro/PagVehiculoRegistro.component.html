@@ -1,0 +1,99 @@
+<div class="card text">
+  <div class="card-header text-bg-dark">
+      <h5>CREACION DE VEHICULO</h5>
+  </div>
+
+
+  <div class = "card-body">
+    <div class="row">
+        <div class="col-12">
+          <form [formGroup]="formulario">
+            <div class="mb-3 row">
+              <label  for="staticcCodigo" class="col-sm-2 col-form-label">Codigo:</label>
+              
+                <input type="text" 
+                class="form-control w-25 is-invalid " 
+                placeholder="Ingrese codigo"
+                name="codigo" 
+                formControlName="codigo"
+                [ngClass]="{ 'is-invalid': formulario.get('codigo')?.errors && formulario.get('codigo')?.touched }"
+                />   
+                <div class="alert alert-danger" 
+                *ngIf="formulario.get('codigo')?.hasError('required') && formulario.get('codigo')?.touched">
+              El campo es requerido</div>
+              
+             
+            </div>
+
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-sm-2 col-form-label">Marca:</label>
+              
+                <input type="text" class="form-control w-25 "  placeholder="Ingrese Marca" formControlName="marca" 
+               />
+               <div class="alert alert-danger" *ngIf="formulario.get('marca')?.hasError('required') && formulario.get('marca')?.touched">
+                El campo es requerido</div>
+              
+              
+            </div>
+    
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Modelo:</label>
+              
+                <input type="text" class="form-control w-25" placeholder="Ingrese Modelo" name="modelo" formControlName="modelo" />
+               <div class="alert alert-danger" *ngIf="formulario.get('modelo')?.hasError('required') && formulario.get('modelo')?.touched">El campo es requerido</div>
+            </div>
+          
+
+    
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Año:</label>
+             
+                <input type="text" class="form-control w-25" placeholder="Ingrese Año" name="anio" formControlName="anio" />
+                <div class="alert alert-danger" *ngIf="formulario.get('anio')?.hasError('required') && formulario.get('anio')?.touched">El campo es requerido</div>
+            </div>
+    
+           
+    
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Kilometraje:</label>
+            <input type="text" class="form-control  w-25" placeholder="Ingrese Kilometraje" name="kilometraje" formControlName="kilometraje">
+               <div class="alert alert-danger" *ngIf="formulario.get('kilometraje')?.hasError('required') && formulario.get('kilometraje')?.touched">El campo es requerido</div >
+            </div>
+    
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Precio:</label>
+              
+                <input type="text" class="form-control  w-25" placeholder="Ingrese Precio" name="precio" formControlName="precio" />
+                <div class="alert alert-danger" *ngIf="formulario.get('precio')?.hasError('required') && formulario.get('precio')?.touched">El campo es requerido</div >
+            </div>
+    
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Calificacion:</label>
+             
+                <input type="text" class="form-control  w-25" placeholder="Ingrese Calificacion" name="calificacion" formControlName="calificacion" />
+                <div class="alert alert-danger" *ngIf="formulario.get('calificacion')?.hasError('required') && formulario.get('calificacion')?.touched">El campo es requerido</div>
+            </div>
+            
+            
+          </form>
+       <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary btn-sm" type="submit" (click)="guardar()">GUARDAR</button>
+       </div>
+             
+            
+        
+
+        </div>
+      
+    </div>
+    <br>
+    <div class="card-footer">
+      <button class='btn btn-outline-secondary' style="width:110px" routerLink="/home"  >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg> Atrás
+      </button>
+  </div>
+  </div>
+</div>
+      
