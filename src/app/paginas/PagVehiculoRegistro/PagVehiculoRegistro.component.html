@@ -75,9 +75,9 @@
             </div>
 
             <div class="mb-3 row">
-              <label for="staticcCodigo" class="col-lg-2 col-form-label">foto(Url):</label>
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">Foto(Url):</label>
              
-                <input type="text" class="form-control  w-25" placeholder="Ingrese foto" name="foto" formControlName="foto" />
+                <input type="text" class="form-control  w-25" placeholder="Ingrese Url" name="foto" formControlName="foto" />
                 <div class="alert alert-danger" *ngIf="formulario.get('foto')?.hasError('required') && formulario.get('foto')?.touched">El campo es requerido</div>
             </div>
             
