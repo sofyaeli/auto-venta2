@@ -73,6 +73,13 @@
                 <input type="text" class="form-control  w-25" placeholder="Ingrese Calificacion" name="calificacion" formControlName="calificacion" />
                 <div class="alert alert-danger" *ngIf="formulario.get('calificacion')?.hasError('required') && formulario.get('calificacion')?.touched">El campo es requerido</div>
             </div>
+
+            <div class="mb-3 row">
+              <label for="staticcCodigo" class="col-lg-2 col-form-label">foto(Url):</label>
+             
+                <input type="text" class="form-control  w-25" placeholder="Ingrese foto" name="foto" formControlName="foto" />
+                <div class="alert alert-danger" *ngIf="formulario.get('foto')?.hasError('required') && formulario.get('foto')?.touched">El campo es requerido</div>
+            </div>
             
             
           </form>
